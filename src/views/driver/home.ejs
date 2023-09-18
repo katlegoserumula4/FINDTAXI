@@ -1,0 +1,44 @@
+<div class="container">
+    <%- include('../partials/sidenav/driver') %>
+
+    <div class="container__main">
+        <%- include('../partials/header/user') %>
+
+        <div class="container__main__content dashboard">
+            <div class="container__main__content__sub-title">
+                <h1>Current trip</h1>
+                <p>View project details</p>
+            </div>
+            <div class="table card">
+                <div class="table__header">
+                    <ul class="table__header__row">
+                        <li class="table__header__row__item">Starting location</li>
+                        <li class="table__header__row__item">Destination</li>
+                        <li class="table__header__row__item">Distance</li>
+                        <li class="table__header__row__item">Cost</li>
+                        <li class="table__header__row__item">Status</li>
+                    </ul>
+                </div>
+                <div class="table__body" id="latest-trip">
+                    
+                </div>
+            </div>
+            <div class="container__main__content__sub-title">
+                <h1>Passangers onboard</h1>
+                <p>Passangers boarding for this trip. | <span id="seats-count"></span></p>
+            </div>
+            <div class="dashboard__passangers flex flex--j-space-between" id="passenger-list"></div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/dist/jquery.js"></script>
+<script type="module">
+    import Trip from "/assets/js/src/auth/Trip.js"
+    import Passenger from "/assets/js/src/auth/Passenger.js"
+
+    Trip.getLatest()
+
+    Passenger.getPassengersByCurrentTrip()
+ 
+</script>

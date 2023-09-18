@@ -1,0 +1,11 @@
+Please advised to follow these steps to navigate through the web app pages
+================================================================================
+Step 1: Download Node.js and XAMPP
+Step 2: Open XAMPP and run under Actions the top port and the other below it
+Step 3: Open the folder that contains app files press and hold ctrl + shift, and right click the mouse 
+and click "Open Powershell window here"
+Step 4:Once powershell is open run command "npm i", wait until it finish, once it finish run command "node app.js"
+Step 5:After the last command mentioned above open Chrome or any browser that support latest technologies, and type
+ "http://localhost:5000/admin/taxi-associations", to access admin page and add admin,then to sign in "http://localhost:5000/association/sign-in"
+ and for users interface type "http://localhost:5000/sign-in" for passenger and driver
+Step 6:To access database search "http://localhost"
